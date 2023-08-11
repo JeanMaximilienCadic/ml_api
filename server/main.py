@@ -6,8 +6,8 @@ import numpy as np
 import time
 import tensorflow as tf
 import torch
-USE_URL = os.get("USE_URL", 'https://tfhub.dev/google/universal-sentence-encoder/3')
-NLLB_ID = os.get("TOKENIZER_URL", "facebook/nllb-200-distilled-600M")
+USE_URL = os.environ.get("USE_URL", 'https://tfhub.dev/google/universal-sentence-encoder/3')
+NLLB_ID = os.environ.get("TOKENIZER_URL", "facebook/nllb-200-distilled-600M")
 DEVICE = os.environ.get("DEVICE", "cpu" if not torch.cuda.is_available() else "cuda")
 
 app = FastAPI()
