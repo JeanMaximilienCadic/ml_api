@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    container_name: iu_oss_api
+    container_name: oss_api
     volumes:
       - $PWD/docker/static/entrypoint:/entrypoint
       - $HOME/.ssh:/home/foo/.ssh
