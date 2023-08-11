@@ -39,7 +39,7 @@ async def root(request: Request):
     input = await request.body()
     input = str(input.decode())
     def embed(input):
-        return model_embeddings([input]*64)
+        return model_embeddings([input]*64)["outputs"]
     try:
         t0 = time.time()
         embed(input)
@@ -54,7 +54,7 @@ async def root(request: Request):
     input = await request.body()
     input = str(input.decode())
     def embed(input):
-        return model_embeddings([input])
+        return model_embeddings([input])["outputs"]
     output = None
     try:
         t0 = time.time()
