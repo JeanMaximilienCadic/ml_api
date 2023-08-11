@@ -24,6 +24,13 @@ git clone https://github.com/JeanMaximilienCadic/ml_api && cd ml_api
 make
 ```
 
+<h1 align="center">
+  <br>
+  <img src="imgs/embeddings.png">
+  <br>
+  <br>
+</h1>
+
 
 ## Ressources
 * Vanilla:  https://en.wikipedia.org/wiki/Vanilla_software
