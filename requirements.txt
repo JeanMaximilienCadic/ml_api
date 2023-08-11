@@ -1,0 +1,16 @@
+google-cloud-bigquery
+pyspark==3.4.0
+pandas
+tqdm
+fugashi[unidic-lite]
+jupyterlab
+jupyter_lsp
+uvicorn
+fastapi
+tensorflow
+seaborn
+tensorflow_hub
+scipy
+transformers
+torch
+sentencepiece
