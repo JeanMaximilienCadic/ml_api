@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  sandbox:
+    image: cadic/oss_api
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: iu_oss_api
+    volumes:
+      - $HOME/.config/gcloud:/home/foo/.config/gcloud
+      - $PWD/docker/static/entrypoint:/entrypoint
+      - $HOME/.ssh:/home/foo/.ssh
+      - $PWD/..:/var/IU
+      - ./:/workspace
+    tty: true
+    restart: always
+    environment:
+      - PYTHONPATH=/workspace
+      - PUID=1000
+      - PGID=1000
+      - ENTRYPOINT=http://0.0.0.0:8080
+    entrypoint: /entrypoint
+    user: foo
